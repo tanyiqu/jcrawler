@@ -1,4 +1,4 @@
-package love.tanyiqu.jcrawler;
+package love.tanyiqu.jcrawler.methods;
 
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -13,17 +13,18 @@ import java.net.URISyntaxException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class JCrawler {
+@SuppressWarnings({"DuplicatedCode", "unused"})
+public class JCrawlerHttpGet {
 
-    public static String get(String url, String charset) throws IOException, URISyntaxException {
-        return JCrawler.get(url, charset, new HashMap<String, String>());
+    public String getHtml(String url, String charset) throws IOException, URISyntaxException {
+        return getHtml(url, charset, new HashMap<String, String>());
     }
 
-    public static String get(String url, String charset, Map<String, String> params) throws IOException, URISyntaxException {
-        return JCrawler.get(url, charset, params, new HashMap<String, String>());
+    public String getHtml(String url, String charset, Map<String, String> params) throws IOException, URISyntaxException {
+        return getHtml(url, charset, params, new HashMap<String, String>());
     }
 
-    public static String get(String url, String charset, Map<String, String> params, Map<String, String> headers) throws IOException, URISyntaxException {
+    public String getHtml(String url, String charset, Map<String, String> params, Map<String, String> headers) throws IOException, URISyntaxException {
         String html = "";
         // 创建HttpClient对象
         CloseableHttpClient httpClient = HttpClients.createDefault();
@@ -61,11 +62,11 @@ public class JCrawler {
         return html;
     }
 
-
     @Test
     public void test() throws IOException, URISyntaxException {
         /*
         String charset = "utf8";
+
         Map<String, String> params = new HashMap<String, String>();
         params.put("tt", "123456");
         params.put("ee", "987654");
@@ -73,12 +74,12 @@ public class JCrawler {
         Map<String, String> headers = new HashMap<String, String>();
         headers.put("User-Agent", "my user-agent");
 
-        String html = JCrawler.get("http://www.tanyiqu.top", charset, params, headers);
-
+        String html = getHtml("http://www.tanyiqu.top", charset, params, headers);
         System.out.println(html);
         */
 
-        System.out.println(JCrawler.get("http://www.tanyiqu.top", "utf8"));
+        System.out.println(getHtml("http://www.tanyiqu.top", "utf8"));
+
     }
 
 }
