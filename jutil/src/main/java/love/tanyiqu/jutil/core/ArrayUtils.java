@@ -3,6 +3,7 @@ package love.tanyiqu.jutil.core;
 import com.sun.istack.internal.Nullable;
 
 import java.lang.reflect.Array;
+import java.util.Arrays;
 
 /**
  * Array utils
@@ -10,6 +11,9 @@ import java.lang.reflect.Array;
 @SuppressWarnings("unused")
 public final class ArrayUtils {
 
+    ///////////////////////////////////////////////////////////////////////////
+    // new array
+    ///////////////////////////////////////////////////////////////////////////
 
     /**
      * Return a new array only of those given elements.
@@ -50,6 +54,10 @@ public final class ArrayUtils {
     }
 
 
+    ///////////////////////////////////////////////////////////////////////////
+    // size
+    ///////////////////////////////////////////////////////////////////////////
+
     /**
      * Return the size of array.
      *
@@ -63,6 +71,10 @@ public final class ArrayUtils {
     }
 
 
+    ///////////////////////////////////////////////////////////////////////////
+    // isEmpty
+    ///////////////////////////////////////////////////////////////////////////
+
     /**
      * Return whether the array is empty .
      *
@@ -73,6 +85,10 @@ public final class ArrayUtils {
         return getLength(array) == 0;
     }
 
+
+    ///////////////////////////////////////////////////////////////////////////
+    // get set
+    ///////////////////////////////////////////////////////////////////////////
 
     /**
      * Get the value of the specified index of the array.
@@ -123,4 +139,77 @@ public final class ArrayUtils {
         Array.set(array, index, value);
     }
 
+
+    ///////////////////////////////////////////////////////////////////////////
+    // equals
+    ///////////////////////////////////////////////////////////////////////////
+
+    /**
+     * Return whether the two arrays are equals.
+     *
+     * @param array1 One array.
+     * @param array2 The other array.
+     * @return Whether the two arrays are equals.
+     */
+    public static boolean equals(@Nullable Object[] array1, @Nullable Object[] array2) {
+        return Arrays.deepEquals(array1, array2);
+    }
+
+    public static boolean equals(boolean[] array1, boolean[] array2) {
+        return Arrays.equals(array1, array2);
+    }
+
+    public static boolean equals(byte[] array1, byte[] array2) {
+        return Arrays.equals(array1, array2);
+    }
+
+    public static boolean equals(char[] array1, char[] array2) {
+        return Arrays.equals(array1, array2);
+    }
+
+    public static boolean equals(double[] array1, double[] array2) {
+        return Arrays.equals(array1, array2);
+    }
+
+    public static boolean equals(float[] array1, float[] array2) {
+        return Arrays.equals(array1, array2);
+    }
+
+    public static boolean equals(int[] array1, int[] array2) {
+        return Arrays.equals(array1, array2);
+    }
+
+    public static boolean equals(short[] array1, short[] array2) {
+        return Arrays.equals(array1, array2);
+    }
+
+
+    ///////////////////////////////////////////////////////////////////////////
+    // reverse
+    ///////////////////////////////////////////////////////////////////////////
+
+    /**
+     * <p>Reverses the order of the given array.</p>
+     *
+     * <p>There is no special handling for multi-dimensional arrays.</p>
+     *
+     * <p>This method does nothing for a <code>null</code> input array.</p>
+     *
+     * @param array the array to reverse, may be <code>null</code>
+     */
+    public static <T> void reverse(T[] array) {
+        if (array == null) {
+            return;
+        }
+        int i = 0;
+        int j = array.length - 1;
+        T tmp;
+        while (j > i) {
+            tmp = array[j];
+            array[j] = array[i];
+            array[i] = tmp;
+            j--;
+            i++;
+        }
+    }
 }

@@ -17,6 +17,9 @@ public class ArrayUtilsTest {
         System.out.println(ArrayUtils.getLength(ints));
 
         System.out.println(ArrayUtils.isEmpty(emp));
+
+        ArrayUtils.set(ints, 1, 666);
+
         System.out.println(ArrayUtils.isEmpty(ints));
 
         System.out.println(ArrayUtils.get(ints, -5, null));
