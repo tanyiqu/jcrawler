@@ -12,6 +12,9 @@ public class ArrayUtilsTest {
     public void test() {
         int[] ints = ArrayUtils.newIntArray(1, 2, 3, 4, 5, 5, 57);
 
+        System.out.println(Arrays.toString(ints));
+
+        /*
         int[] emp = ArrayUtils.newIntArray();
 
         System.out.println(ArrayUtils.getLength(ints));
@@ -25,7 +28,12 @@ public class ArrayUtilsTest {
         System.out.println(ArrayUtils.get(ints, -5, null));
         System.out.println(ArrayUtils.get(ints, 7));
 
+        */
+
+        ArrayUtils.reverse(ints);
+
         System.out.println(Arrays.toString(ints));
+        System.out.println(Arrays.toString(ArrayUtils.subArray(ints,1,3)));
     }
 
 

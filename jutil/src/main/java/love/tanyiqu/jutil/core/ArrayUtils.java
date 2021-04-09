@@ -8,7 +8,7 @@ import java.util.Arrays;
 /**
  * Array utils
  */
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "DuplicatedCode"})
 public final class ArrayUtils {
 
     ///////////////////////////////////////////////////////////////////////////
@@ -91,9 +91,9 @@ public final class ArrayUtils {
     ///////////////////////////////////////////////////////////////////////////
 
     /**
-     * Get the value of the specified index of the array.
-     * If the array is null or empty, return the default value.
-     * If the index exceeds the size of the array, return the default value.
+     * <p>Get the value of the specified index of the array.</p>
+     * <p>If the array is null or empty, return the default value.</p>
+     * <p>If the index exceeds the size of the array, return the default value.</p>
      *
      * @param array        The array.
      * @param index        The index of the array.
@@ -113,9 +113,9 @@ public final class ArrayUtils {
 
 
     /**
-     * Get the value of the specified index of the array.
-     * If the array is null or empty, return null.
-     * If the index exceeds the size of the array, return null.
+     * <p>Get the value of the specified index of the array.</p>
+     * <p>If the array is null or empty, return null.</p>
+     * <p>If the index exceeds the size of the array, return <code>null</code>.</p>
      *
      * @param array The array.
      * @param index The index of the array.
@@ -212,4 +212,207 @@ public final class ArrayUtils {
             i++;
         }
     }
+
+    public static void reverse(int[] array) {
+        if (array == null) {
+            return;
+        }
+        int i = 0;
+        int j = array.length - 1;
+        int tmp;
+        while (j > i) {
+            tmp = array[j];
+            array[j] = array[i];
+            array[i] = tmp;
+            j--;
+            i++;
+        }
+    }
+
+    public static void reverse(long[] array) {
+        if (array == null) {
+            return;
+        }
+        int i = 0;
+        int j = array.length - 1;
+        long tmp;
+        while (j > i) {
+            tmp = array[j];
+            array[j] = array[i];
+            array[i] = tmp;
+            j--;
+            i++;
+        }
+    }
+
+    public static void reverse(short[] array) {
+        if (array == null) {
+            return;
+        }
+        int i = 0;
+        int j = array.length - 1;
+        short tmp;
+        while (j > i) {
+            tmp = array[j];
+            array[j] = array[i];
+            array[i] = tmp;
+            j--;
+            i++;
+        }
+    }
+
+    public static void reverse(char[] array) {
+        if (array == null) {
+            return;
+        }
+        int i = 0;
+        int j = array.length - 1;
+        char tmp;
+        while (j > i) {
+            tmp = array[j];
+            array[j] = array[i];
+            array[i] = tmp;
+            j--;
+            i++;
+        }
+    }
+
+    public static void reverse(byte[] array) {
+        if (array == null) {
+            return;
+        }
+        int i = 0;
+        int j = array.length - 1;
+        byte tmp;
+        while (j > i) {
+            tmp = array[j];
+            array[j] = array[i];
+            array[i] = tmp;
+            j--;
+            i++;
+        }
+    }
+
+    public static void reverse(double[] array) {
+        if (array == null) {
+            return;
+        }
+        int i = 0;
+        int j = array.length - 1;
+        double tmp;
+        while (j > i) {
+            tmp = array[j];
+            array[j] = array[i];
+            array[i] = tmp;
+            j--;
+            i++;
+        }
+    }
+
+    public static void reverse(float[] array) {
+        if (array == null) {
+            return;
+        }
+        int i = 0;
+        int j = array.length - 1;
+        float tmp;
+        while (j > i) {
+            tmp = array[j];
+            array[j] = array[i];
+            array[i] = tmp;
+            j--;
+            i++;
+        }
+    }
+
+    public static void reverse(boolean[] array) {
+        if (array == null) {
+            return;
+        }
+        int i = 0;
+        int j = array.length - 1;
+        boolean tmp;
+        while (j > i) {
+            tmp = array[j];
+            array[j] = array[i];
+            array[i] = tmp;
+            j--;
+            i++;
+        }
+    }
+
+
+    ///////////////////////////////////////////////////////////////////////////
+    // subArray
+    ///////////////////////////////////////////////////////////////////////////
+
+    @SuppressWarnings("unchecked")
+    @Nullable
+    public static <T> T[] subArray(@Nullable T[] array, int startIndexInclusive, int endIndexExclusive) {
+        return (T[]) realSubArray(array, startIndexInclusive, endIndexExclusive);
+    }
+
+    @Nullable
+    public static long[] subArray(@Nullable long[] array, int startIndexInclusive, int endIndexExclusive) {
+        return (long[]) realSubArray(array, startIndexInclusive, endIndexExclusive);
+    }
+
+    @Nullable
+    public static int[] subArray(@Nullable int[] array, int startIndexInclusive, int endIndexExclusive) {
+        return (int[]) realSubArray(array, startIndexInclusive, endIndexExclusive);
+    }
+
+    @Nullable
+    public static short[] subArray(@Nullable short[] array, int startIndexInclusive, int endIndexExclusive) {
+        return (short[]) realSubArray(array, startIndexInclusive, endIndexExclusive);
+    }
+
+    @Nullable
+    public static char[] subArray(@Nullable char[] array, int startIndexInclusive, int endIndexExclusive) {
+        return (char[]) realSubArray(array, startIndexInclusive, endIndexExclusive);
+    }
+
+    @Nullable
+    public static byte[] subArray(@Nullable byte[] array, int startIndexInclusive, int endIndexExclusive) {
+        return (byte[]) realSubArray(array, startIndexInclusive, endIndexExclusive);
+    }
+
+    @Nullable
+    public static double[] subArray(@Nullable double[] array, int startIndexInclusive, int endIndexExclusive) {
+        return (double[]) realSubArray(array, startIndexInclusive, endIndexExclusive);
+    }
+
+    @Nullable
+    public static float[] subArray(@Nullable float[] array, int startIndexInclusive, int endIndexExclusive) {
+        return (float[]) realSubArray(array, startIndexInclusive, endIndexExclusive);
+    }
+
+    @Nullable
+    public static boolean[] subArray(@Nullable boolean[] array, int startIndexInclusive, int endIndexExclusive) {
+        return (boolean[]) realSubArray(array, startIndexInclusive, endIndexExclusive);
+    }
+
+    @SuppressWarnings({"rawtypes", "SuspiciousSystemArraycopy"})
+    @Nullable
+    private static Object realSubArray(@Nullable Object array, int startIndexInclusive, int endIndexExclusive) {
+        if (array == null) {
+            return null;
+        }
+        if (startIndexInclusive < 0) {
+            startIndexInclusive = 0;
+        }
+        int length = getLength(array);
+        if (endIndexExclusive > length) {
+            endIndexExclusive = length;
+        }
+        int newSize = endIndexExclusive - startIndexInclusive;
+        Class type = array.getClass().getComponentType();
+        if (newSize <= 0) {
+            return Array.newInstance(type, 0);
+        }
+        Object subArray = Array.newInstance(type, newSize);
+        System.arraycopy(array, startIndexInclusive, subArray, 0, newSize);
+        return subArray;
+    }
+
 }
