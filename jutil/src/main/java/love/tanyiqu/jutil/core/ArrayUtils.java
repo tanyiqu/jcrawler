@@ -11,7 +11,6 @@ import java.util.Arrays;
 @SuppressWarnings({"unused", "DuplicatedCode"})
 public final class ArrayUtils {
 
-
     static final int INDEX_NOT_FOUND = -1;
 
     ///////////////////////////////////////////////////////////////////////////
@@ -420,9 +419,17 @@ public final class ArrayUtils {
 
 
     ///////////////////////////////////////////////////////////////////////////
-    // indexOf
+    // object indexOf
     ///////////////////////////////////////////////////////////////////////////
 
+    /**
+     * <p>Returns the index of the specified element in the array.</p>
+     * <p>If it does not exist, return -1.</p>
+     *
+     * @param array        The array.
+     * @param objectToFind The element.
+     * @return The index of the specified element in the array.
+     */
     public static int indexOf(@Nullable Object[] array, @Nullable Object objectToFind) {
         return indexOf(array, objectToFind, 0);
     }
@@ -449,4 +456,34 @@ public final class ArrayUtils {
         }
         return INDEX_NOT_FOUND;
     }
+
+    public static int lastIndexOf(@Nullable Object[] array, @Nullable Object objectToFind) {
+        return lastIndexOf(array, objectToFind, Integer.MAX_VALUE);
+    }
+
+    public static int lastIndexOf(@Nullable Object[] array, @Nullable Object objectToFind, int startIndex) {
+        if (array == null) {
+            return INDEX_NOT_FOUND;
+        }
+        if (startIndex < 0) {
+            return INDEX_NOT_FOUND;
+        } else if (startIndex >= array.length) {
+            startIndex = array.length - 1;
+        }
+        if (objectToFind == null) {
+            for (int i = startIndex; i >= 0; i--) {
+                if (array[i] == null) {
+                    return i;
+                }
+            }
+        } else {
+            for (int i = startIndex; i >= 0; i--) {
+                if (objectToFind.equals(array[i])) {
+                    return i;
+                }
+            }
+        }
+        return INDEX_NOT_FOUND;
+    }
+
 }

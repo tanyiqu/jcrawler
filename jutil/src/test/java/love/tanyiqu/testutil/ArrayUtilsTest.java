@@ -30,10 +30,24 @@ public class ArrayUtilsTest {
 
         */
 
-        ArrayUtils.reverse(ints);
+//        ArrayUtils.reverse(ints);
+//
+//        System.out.println(Arrays.toString(ints));
+//        System.out.println(Arrays.toString(ArrayUtils.subArray(ints,1,3)));
 
-        System.out.println(Arrays.toString(ints));
-        System.out.println(Arrays.toString(ArrayUtils.subArray(ints,1,3)));
+
+        Integer[] integers = new Integer[5];
+        integers[0] = 4;
+        integers[1] = 4;
+        integers[2] = 4;
+        integers[3] = 5;
+        integers[4] = 4;
+        int index = ArrayUtils.indexOf(integers, 5);
+        System.out.println(index);
+
+
+        System.out.println(ArrayUtils.lastIndexOf(integers, 5));
+
     }
 
 
