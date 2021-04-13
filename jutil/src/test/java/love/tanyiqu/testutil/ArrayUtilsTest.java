@@ -3,16 +3,16 @@ package love.tanyiqu.testutil;
 import love.tanyiqu.jutil.core.ArrayUtils;
 import org.junit.Test;
 
-import java.util.Arrays;
-
 public class ArrayUtilsTest {
 
 
     @Test
     public void test() {
-        int[] ints = ArrayUtils.newIntArray(1, 2, 3, 4, 5, 5, 57);
 
+        /*
+        int[] ints = ArrayUtils.newIntArray(1, 2, 3, 4, 5, 5, 57);
         System.out.println(Arrays.toString(ints));
+        */
 
         /*
         int[] emp = ArrayUtils.newIntArray();
@@ -36,6 +36,7 @@ public class ArrayUtilsTest {
 //        System.out.println(Arrays.toString(ArrayUtils.subArray(ints,1,3)));
 
 
+        /*
         Integer[] integers = new Integer[5];
         integers[0] = 4;
         integers[1] = 4;
@@ -44,9 +45,12 @@ public class ArrayUtilsTest {
         integers[4] = 4;
         int index = ArrayUtils.indexOf(integers, 5);
         System.out.println(index);
-
-
         System.out.println(ArrayUtils.lastIndexOf(integers, 5));
+        */
+
+        float[] floats = new float[]{1.1f, 1.2000f, 1.3f, 1.444f};
+
+        System.out.println(ArrayUtils.indexOf(floats, 1.2f));
 
     }
 
