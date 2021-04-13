@@ -888,4 +888,47 @@ public final class ArrayUtils {
         return INDEX_NOT_FOUND;
     }
 
+    ///////////////////////////////////////////////////////////////////////////
+    // contains
+    ///////////////////////////////////////////////////////////////////////////
+
+    public static boolean contains(@Nullable Object[] array, @Nullable Object objectToFind) {
+        return indexOf(array, objectToFind) != INDEX_NOT_FOUND;
+    }
+
+    public static boolean contains(@Nullable int[] array, int valueToFind) {
+        return indexOf(array, valueToFind) != INDEX_NOT_FOUND;
+    }
+
+    public static boolean contains(@Nullable long[] array, long valueToFind) {
+        return indexOf(array, valueToFind) != INDEX_NOT_FOUND;
+    }
+
+    public static boolean contains(@Nullable short[] array, short valueToFind) {
+        return indexOf(array, valueToFind) != INDEX_NOT_FOUND;
+    }
+
+    public static boolean contains(@Nullable char[] array, char valueToFind) {
+        return indexOf(array, valueToFind) != INDEX_NOT_FOUND;
+    }
+
+    public static boolean contains(@Nullable byte[] array, byte valueToFind) {
+        return indexOf(array, valueToFind) != INDEX_NOT_FOUND;
+    }
+
+    public static boolean contains(@Nullable float[] array, float valueToFind) {
+        return indexOf(array, valueToFind) != INDEX_NOT_FOUND;
+    }
+
+    public static boolean contains(@Nullable double[] array, double valueToFind) {
+        return indexOf(array, valueToFind) != INDEX_NOT_FOUND;
+    }
+
+    public static boolean contains(@Nullable double[] array, double valueToFind, double tolerance) {
+        return indexOf(array, valueToFind, 0, tolerance) != INDEX_NOT_FOUND;
+    }
+
+    public static boolean contains(@Nullable boolean[] array, boolean valueToFind) {
+        return indexOf(array, valueToFind) != INDEX_NOT_FOUND;
+    }
 }
