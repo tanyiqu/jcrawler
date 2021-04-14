@@ -931,4 +931,380 @@ public final class ArrayUtils {
     public static boolean contains(@Nullable boolean[] array, boolean valueToFind) {
         return indexOf(array, valueToFind) != INDEX_NOT_FOUND;
     }
+
+    ///////////////////////////////////////////////////////////////////////////
+    // char converters
+    ///////////////////////////////////////////////////////////////////////////
+
+    @Nullable
+    public static char[] toPrimitive(@Nullable Character[] array) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new char[0];
+        }
+        final char[] result = new char[array.length];
+        for (int i = 0; i < array.length; i++) {
+            result[i] = array[i];
+        }
+        return result;
+    }
+
+    @Nullable
+    public static char[] toPrimitive(@Nullable Character[] array, char valueForNull) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new char[0];
+        }
+        final char[] result = new char[array.length];
+        for (int i = 0; i < array.length; i++) {
+            Character b = array[i];
+            result[i] = (b == null ? valueForNull : b);
+        }
+        return result;
+    }
+
+    @Nullable
+    public static Character[] toObject(@Nullable char[] array) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new Character[0];
+        }
+        final Character[] result = new Character[array.length];
+        for (int i = 0; i < array.length; i++) {
+            result[i] = array[i];
+        }
+        return result;
+    }
+
+    ///////////////////////////////////////////////////////////////////////////
+    // long converters
+    ///////////////////////////////////////////////////////////////////////////
+
+    @Nullable
+    public static long[] toPrimitive(@Nullable Long[] array) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new long[0];
+        }
+        final long[] result = new long[array.length];
+        for (int i = 0; i < array.length; i++) {
+            result[i] = array[i];
+        }
+        return result;
+    }
+
+    @Nullable
+    public static long[] toPrimitive(@Nullable Long[] array, long valueForNull) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new long[0];
+        }
+        final long[] result = new long[array.length];
+        for (int i = 0; i < array.length; i++) {
+            Long b = array[i];
+            result[i] = (b == null ? valueForNull : b);
+        }
+        return result;
+    }
+
+    @Nullable
+    public static Long[] toObject(@Nullable long[] array) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new Long[0];
+        }
+        final Long[] result = new Long[array.length];
+        for (int i = 0; i < array.length; i++) {
+            result[i] = array[i];
+        }
+        return result;
+    }
+
+    ///////////////////////////////////////////////////////////////////////////
+    // int converters
+    ///////////////////////////////////////////////////////////////////////////
+
+    @Nullable
+    public static int[] toPrimitive(@Nullable Integer[] array) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new int[0];
+        }
+        final int[] result = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            result[i] = array[i];
+        }
+        return result;
+    }
+
+    @Nullable
+    public static int[] toPrimitive(@Nullable Integer[] array, int valueForNull) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new int[0];
+        }
+        final int[] result = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            Integer b = array[i];
+            result[i] = (b == null ? valueForNull : b);
+        }
+        return result;
+    }
+
+    @Nullable
+    public static Integer[] toObject(@Nullable int[] array) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new Integer[0];
+        }
+        final Integer[] result = new Integer[array.length];
+        for (int i = 0; i < array.length; i++) {
+            result[i] = array[i];
+        }
+        return result;
+    }
+
+    ///////////////////////////////////////////////////////////////////////////
+    // short converters
+    ///////////////////////////////////////////////////////////////////////////
+
+    @Nullable
+    public static short[] toPrimitive(@Nullable Short[] array) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new short[0];
+        }
+        final short[] result = new short[array.length];
+        for (int i = 0; i < array.length; i++) {
+            result[i] = array[i];
+        }
+        return result;
+    }
+
+    @Nullable
+    public static short[] toPrimitive(@Nullable Short[] array, short valueForNull) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new short[0];
+        }
+        final short[] result = new short[array.length];
+        for (int i = 0; i < array.length; i++) {
+            Short b = array[i];
+            result[i] = (b == null ? valueForNull : b);
+        }
+        return result;
+    }
+
+    @Nullable
+    public static Short[] toObject(@Nullable short[] array) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new Short[0];
+        }
+        final Short[] result = new Short[array.length];
+        for (int i = 0; i < array.length; i++) {
+            result[i] = array[i];
+        }
+        return result;
+    }
+
+    ///////////////////////////////////////////////////////////////////////////
+    // byte converters
+    ///////////////////////////////////////////////////////////////////////////
+
+    @Nullable
+    public static byte[] toPrimitive(@Nullable Byte[] array) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new byte[0];
+        }
+        final byte[] result = new byte[array.length];
+        for (int i = 0; i < array.length; i++) {
+            result[i] = array[i];
+        }
+        return result;
+    }
+
+    @Nullable
+    public static byte[] toPrimitive(@Nullable Byte[] array, byte valueForNull) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new byte[0];
+        }
+        final byte[] result = new byte[array.length];
+        for (int i = 0; i < array.length; i++) {
+            Byte b = array[i];
+            result[i] = (b == null ? valueForNull : b);
+        }
+        return result;
+    }
+
+    @Nullable
+    public static Byte[] toObject(@Nullable byte[] array) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new Byte[0];
+        }
+        final Byte[] result = new Byte[array.length];
+        for (int i = 0; i < array.length; i++) {
+            result[i] = array[i];
+        }
+        return result;
+    }
+
+    ///////////////////////////////////////////////////////////////////////////
+    // double converters
+    ///////////////////////////////////////////////////////////////////////////
+
+    @Nullable
+    public static double[] toPrimitive(@Nullable Double[] array) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new double[0];
+        }
+        final double[] result = new double[array.length];
+        for (int i = 0; i < array.length; i++) {
+            result[i] = array[i];
+        }
+        return result;
+    }
+
+    @Nullable
+    public static double[] toPrimitive(@Nullable Double[] array, double valueForNull) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new double[0];
+        }
+        final double[] result = new double[array.length];
+        for (int i = 0; i < array.length; i++) {
+            Double b = array[i];
+            result[i] = (b == null ? valueForNull : b);
+        }
+        return result;
+    }
+
+    @Nullable
+    public static Double[] toObject(@Nullable double[] array) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new Double[0];
+        }
+        final Double[] result = new Double[array.length];
+        for (int i = 0; i < array.length; i++) {
+            result[i] = array[i];
+        }
+        return result;
+    }
+
+    ///////////////////////////////////////////////////////////////////////////
+    // float converters
+    ///////////////////////////////////////////////////////////////////////////
+
+    @Nullable
+    public static float[] toPrimitive(@Nullable Float[] array) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new float[0];
+        }
+        final float[] result = new float[array.length];
+        for (int i = 0; i < array.length; i++) {
+            result[i] = array[i];
+        }
+        return result;
+    }
+
+    @Nullable
+    public static float[] toPrimitive(@Nullable Float[] array, float valueForNull) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new float[0];
+        }
+        final float[] result = new float[array.length];
+        for (int i = 0; i < array.length; i++) {
+            Float b = array[i];
+            result[i] = (b == null ? valueForNull : b);
+        }
+        return result;
+    }
+
+    @Nullable
+    public static Float[] toObject(@Nullable float[] array) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new Float[0];
+        }
+        final Float[] result = new Float[array.length];
+        for (int i = 0; i < array.length; i++) {
+            result[i] = array[i];
+        }
+        return result;
+    }
+
+    ///////////////////////////////////////////////////////////////////////////
+    // boolean converters
+    ///////////////////////////////////////////////////////////////////////////
+
+    @Nullable
+    public static boolean[] toPrimitive(@Nullable Boolean[] array) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new boolean[0];
+        }
+        final boolean[] result = new boolean[array.length];
+        for (int i = 0; i < array.length; i++) {
+            result[i] = array[i];
+        }
+        return result;
+    }
+
+    @Nullable
+    public static boolean[] toPrimitive(@Nullable Boolean[] array, boolean valueForNull) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new boolean[0];
+        }
+        final boolean[] result = new boolean[array.length];
+        for (int i = 0; i < array.length; i++) {
+            Boolean b = array[i];
+            result[i] = (b == null ? valueForNull : b);
+        }
+        return result;
+    }
+
+    @Nullable
+    public static Boolean[] toObject(@Nullable boolean[] array) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new Boolean[0];
+        }
+        final Boolean[] result = new Boolean[array.length];
+        for (int i = 0; i < array.length; i++) {
+            result[i] = (array[i] ? Boolean.TRUE : Boolean.FALSE);
+        }
+        return result;
+    }
 }
