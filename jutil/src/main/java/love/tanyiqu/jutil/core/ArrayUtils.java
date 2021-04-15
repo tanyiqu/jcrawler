@@ -3,7 +3,7 @@ package love.tanyiqu.jutil.core;
 import com.sun.istack.internal.Nullable;
 
 import java.lang.reflect.Array;
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * Array utils
@@ -1307,4 +1307,40 @@ public final class ArrayUtils {
         }
         return result;
     }
+
+
+    ///////////////////////////////////////////////////////////////////////////
+    // to List
+    ///////////////////////////////////////////////////////////////////////////
+
+    @SafeVarargs
+    public static <T> List<T> toList(@Nullable T... array) {
+        if (array == null || array.length == 0) {
+            return Collections.emptyList();
+        }
+        return Arrays.asList(array);
+    }
+
+    @SafeVarargs
+    public static <T> List<T> toUnmodifiableList(@Nullable T... array) {
+        return Collections.unmodifiableList(toList(array));
+    }
+
+    @SafeVarargs
+    public static <T> List<T> toArrayList(@Nullable T... array) {
+        List<T> list = new ArrayList<>();
+        if (array == null || array.length == 0) return list;
+        list.addAll(Arrays.asList(array));
+        return list;
+    }
+
+    @SafeVarargs
+    public static <T> List<T> toLinkedList(@Nullable T... array) {
+        List<T> list = new LinkedList<>();
+        if (array == null || array.length == 0) return list;
+        list.addAll(Arrays.asList(array));
+        return list;
+    }
+
+
 }
