@@ -1389,6 +1389,71 @@ public final class ArrayUtils {
 
 
     ///////////////////////////////////////////////////////////////////////////
+    // copy
+    ///////////////////////////////////////////////////////////////////////////
+
+    @Nullable
+    public static <T> T[] copy(@Nullable T[] array) {
+        if (array == null) return null;
+        return subArray(array, 0, array.length);
+    }
+
+    @Nullable
+    public static long[] copy(@Nullable long[] array) {
+        if (array == null) return null;
+        return subArray(array, 0, array.length);
+    }
+
+    @Nullable
+    public static int[] copy(@Nullable int[] array) {
+        if (array == null) return null;
+        return subArray(array, 0, array.length);
+    }
+
+    @Nullable
+    public static short[] copy(@Nullable short[] array) {
+        if (array == null) return null;
+        return subArray(array, 0, array.length);
+    }
+
+    @Nullable
+    public static char[] copy(@Nullable char[] array) {
+        if (array == null) return null;
+        return subArray(array, 0, array.length);
+    }
+
+    @Nullable
+    public static byte[] copy(@Nullable byte[] array) {
+        if (array == null) return null;
+        return subArray(array, 0, array.length);
+    }
+
+    @Nullable
+    public static double[] copy(@Nullable double[] array) {
+        if (array == null) return null;
+        return subArray(array, 0, array.length);
+    }
+
+    @Nullable
+    public static float[] copy(@Nullable float[] array) {
+        if (array == null) return null;
+        return subArray(array, 0, array.length);
+    }
+
+    @Nullable
+    public static boolean[] copy(@Nullable boolean[] array) {
+        if (array == null) return null;
+        return subArray(array, 0, array.length);
+    }
+
+    @Nullable
+    private static Object realCopy(@Nullable Object array) {
+        if (array == null) return null;
+        return realSubArray(array, 0, getLength(array));
+    }
+
+
+    ///////////////////////////////////////////////////////////////////////////
     // toString
     ///////////////////////////////////////////////////////////////////////////
 
