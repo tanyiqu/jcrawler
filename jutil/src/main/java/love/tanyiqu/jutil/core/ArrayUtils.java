@@ -1452,6 +1452,81 @@ public final class ArrayUtils {
         return realSubArray(array, 0, getLength(array));
     }
 
+    ///////////////////////////////////////////////////////////////////////////
+    // remove
+    ///////////////////////////////////////////////////////////////////////////
+
+    @SuppressWarnings("SuspiciousSystemArraycopy")
+    private static Object remove(Object array, int index) {
+        int length = getLength(array);
+        if (index < 0 || index >= length) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Length: " + length);
+        }
+
+        Object result = Array.newInstance(array.getClass().getComponentType(), length - 1);
+        System.arraycopy(array, 0, result, 0, index);
+        if (index < length - 1) {
+            System.arraycopy(array, index + 1, result, index, length - index - 1);
+        }
+
+        return result;
+    }
+
+    @Nullable
+    public static <T> T[] remove(@Nullable T[] array, int index) {
+        if (array == null) return null;
+        //noinspection unchecked
+        return (T[]) remove((Object) array, index);
+    }
+
+    @Nullable
+    public static int[] remove(@Nullable int[] array, int index) {
+        if (array == null) return null;
+        return (int[]) remove((Object) array, index);
+    }
+
+    @Nullable
+    public static byte[] remove(@Nullable byte[] array, int index) {
+        if (array == null) return null;
+        return (byte[]) remove((Object) array, index);
+    }
+
+    @Nullable
+    public static char[] remove(@Nullable char[] array, int index) {
+        if (array == null) return null;
+        return (char[]) remove((Object) array, index);
+    }
+
+    @Nullable
+    public static double[] remove(@Nullable double[] array, int index) {
+        if (array == null) return null;
+        return (double[]) remove((Object) array, index);
+    }
+
+    @Nullable
+    public static float[] remove(@Nullable float[] array, int index) {
+        if (array == null) return null;
+        return (float[]) remove((Object) array, index);
+    }
+
+    @Nullable
+    public static long[] remove(@Nullable long[] array, int index) {
+        if (array == null) return null;
+        return (long[]) remove((Object) array, index);
+    }
+
+    @Nullable
+    public static short[] remove(@Nullable short[] array, int index) {
+        if (array == null) return null;
+        return (short[]) remove((Object) array, index);
+    }
+
+    @Nullable
+    public static boolean[] remove(@Nullable boolean[] array, int index) {
+        if (array == null) return null;
+        return (boolean[]) remove((Object) array, index);
+    }
+
 
     ///////////////////////////////////////////////////////////////////////////
     // toString
