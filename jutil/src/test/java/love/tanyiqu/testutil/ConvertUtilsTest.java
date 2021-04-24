@@ -13,10 +13,6 @@ public class ConvertUtilsTest {
 
         System.out.println(ConvertUtils.hexString2Int("ff"));
 
-        System.out.println(ConvertUtils.bytes2Bits(new byte[]{1, 1, 1, 0x7f}));
-
-        System.out.println(ArrayUtils.toString(ConvertUtils.bits2Bytes("100001010")));
-
     }
 
 }
